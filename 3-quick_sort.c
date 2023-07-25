@@ -43,7 +43,6 @@ int lomuto_partitioner(int *array, size_t size, int front, int back)
 			up++;
 		}
 	}
-  
 	if (array[up] > *pivot)
 	{
 		swap_ptr(array + up, pivot);
