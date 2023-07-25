@@ -3,9 +3,10 @@
 #include "sort.h"
 
 /**
- * insertion_sort_list - sorts a linked list using insertion sort
+ * insertion_sort_list - sorts a doubly linked list of integers using insertion
+ * sort algorithm.
  *
- * 
+ * @list: Given doubly linked list to be sorted
  */
 
 void insertion_sort_list(listint_t **list)
