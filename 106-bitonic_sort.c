@@ -69,7 +69,7 @@ void sort_bitonic(int *array, int dir, size_t size, size_t subsiz)
 	bitonic_merge(array, dir, size);
 	printf("Result [%lu/%lu] (%s):\n", size, subsiz, (dir == 1) ? "UP" : "DOWN");
 	print_array(array, size);
-} 
+}
 
 /**
  * bitonic_sort - sorts an array of integers in ascending order using
