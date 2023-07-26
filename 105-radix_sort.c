@@ -65,14 +65,14 @@ void radix_sort(int *array, size_t size)
 {
 	/* Find the maximum number to know number of digits */
 	int exp, max = 0;
-	int *res = '\0'; /* output array should be n(size) */
+	int *res = NULL; /* output array should be n(size) */
 
-	if (array == '\0' || size < 2)
+	if (array == NULL || size < 2)
 		return;
 
 	max = get_max(array, size);
 	res = malloc(size * sizeof(int));
-	if (res == '\0')
+	if (res == NULL)
 		return;
 	/*
 	* Do counting sort for every digit. Note that instead
