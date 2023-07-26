@@ -5,7 +5,7 @@
  * @a: first element
  * @b: second element
  */
-void swap(int *array, ssize_t a, ssize_t b)
+void swap_node(int *array, ssize_t a, ssize_t b)
 {
 	int ptr;
 
