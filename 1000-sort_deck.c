@@ -101,7 +101,7 @@ void insertion_sort_deck(deck_node_t **deck)
 		}
 		node = node->next;
 	}
-}  
+}
 /**
  * sort_deck - sort a deck you put in using
  * insertion sort algorithm
