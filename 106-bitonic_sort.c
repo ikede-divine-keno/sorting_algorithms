@@ -52,7 +52,7 @@ void bitonic_merge(int *array, int dir, size_t size)
  * @array: the array (or subarray) to sort
  * @dir: the direction of sorting
  * @size: size of the full array
- * @subsize: the size of the subarray
+ * @subsiz: the size of the subarray
  */
 
 void sort_bitonic(int *array, int dir, size_t size, size_t subsiz)
