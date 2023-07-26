@@ -18,7 +18,7 @@ int str_cmp(const char *str1, char *str2)
 			return (0);
 		n++;
 	}
-	if (str1[n] == NULL && str2[n])
+	if (str1[n] == '\0' && str2[n])
 		return (0);
 	return (1);
 }
@@ -34,15 +34,15 @@ int locate_card(deck_node_t *node)
 	val = (*node).card->value[0] - '0';
 	if (val < 50 || val > 57)
 	{
-		if (str_cmp((*node).card->val, "Ace") == 1)
+		if (str_cmp((*node).card->value, "Ace") == 1)
 			val = 1;
-		else if (str_cmp((*node).card->val, "10") == 1)
+		else if (str_cmp((*node).card->value, "10") == 1)
 			val = 10;
-		else if (str_cmp((*node).card->val, "Jack") == 1)
+		else if (str_cmp((*node).card->value, "Jack") == 1)
 			val = 11;
-		else if (str_cmp((*node).card->val, "Queen") == 1)
+		else if (str_cmp((*node).card->value, "Queen") == 1)
 			val = 12;
-		else if (str_cmp((*node).card->val, "King") == 1)
+		else if (str_cmp((*node).card->value, "King") == 1)
 			val = 13;
 	}
 	val += (*node).card->kind * 13;
