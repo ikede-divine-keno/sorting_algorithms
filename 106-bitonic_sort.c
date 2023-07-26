@@ -7,7 +7,7 @@
  * @size: the size of the array
  */
 
-void compare(int *array, int dir, size_t size)
+void swap_cmp(int *array, int dir, size_t size)
 {
 	size_t n, seq;
 	int ptr;
@@ -43,7 +43,7 @@ void bitonic_merge(int *array, int dir, size_t size)
 
 	swap_cmp(array, dir, size);
 	bitonic_merge(array, dir, half);
-	butonic_merge((array + half), dir, half);
+	bitonic_merge((array + half), dir, half);
 }
 
 /**
@@ -55,7 +55,7 @@ void bitonic_merge(int *array, int dir, size_t size)
  * @subsize: the size of the subarray
  */
 
-void sort_bitonic(int *array, int dir, size_t size, size_t subsize)
+void sort_bitonic(int *array, int dir, size_t size, size_t subsiz)
 {
 	size_t half = (size / 2);
 
@@ -64,12 +64,12 @@ void sort_bitonic(int *array, int dir, size_t size, size_t subsize)
 
 	printf("Merging [%lu/%lu] (%s):\n", size, subsiz, (dir == 1) ? "UP" : "DOWN");
 	print_array(array, size);
-	sort_bitonic(array, 1, half, subsize);
-	sort_bitonic((array + half), 0, half, subsize);
+	sort_bitonic(array, 1, half, subsiz);
+	sort_bitonic((array + half), 0, half, subsiz);
 	bitonic_merge(array, dir, size);
-	printf("Result [%lu/%lu] (%s):\n", size, subsize, (dir == 1) ? "UP" : "DOWN");
+	printf("Result [%lu/%lu] (%s):\n", size, subsiz, (dir == 1) ? "UP" : "DOWN");
 	print_array(array, size);
-}
+} 
 
 /**
  * bitonic_sort - sorts an array of integers in ascending order using
