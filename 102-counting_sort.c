@@ -37,4 +37,4 @@ void counting_sort(int *array, size_t size)
 		counter[cpy_arr[n]]--;
 	}
 	free(counter);
-} 
+}
