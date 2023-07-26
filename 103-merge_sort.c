@@ -75,4 +75,4 @@ void merge_sort(int *array, size_t size)
 	for (; n < size; n++)
 		cpy[n] = array[n];
 	merge_parse(0, size, array, cpy);
-} 
+}
