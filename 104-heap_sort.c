@@ -70,4 +70,4 @@ void heap_sort(int *array, size_t size)
 		print_array(array, size);
 		Max_Heap(array, a, 0, size);
 	}
-} 
+}
